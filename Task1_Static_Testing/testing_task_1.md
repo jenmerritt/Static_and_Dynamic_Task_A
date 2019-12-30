@@ -6,7 +6,11 @@
 
 class CardGame
 
-# check_for_ace would be better method name. = should be == as it is not assigning it is comparing.
+# an instance of the class would be required to run the functions on, so an initialize function is needed.
+
+# check_for_ace would be better method name.
+# = should be == as it is not assigning it is comparing
+
   def checkforAce(card)
     if card.value = 1
       return true
@@ -35,6 +39,7 @@ def self.cards_total(cards)
   for card in cards
     total += card.value
 # total is required to be either converted to a string or included within the string, as at present total is an integer.
+# the return should also be outside of the for loop as otherwise it will only return the first one.
     return "You have a total of" + total
   end
 end
